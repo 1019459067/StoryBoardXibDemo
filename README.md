@@ -25,8 +25,10 @@
 ![](image/xib自定义cell.jpg)
 
 `demo`中`cell`的创建使用了两种方式：
-1、类文件和xib分开创建 （`XibTableViewCell`）
-2、类文件和xib分开创建 （`XibFileTableViewCell`）
+
+#### 1、类文件和xib分开创建 （`XibTableViewCell`）
+
+#### 2、类文件和xib分开创建 （`XibFileTableViewCell`）
 
 不管使用哪种方式，都是带高度自适应的效果。实现方式如下：
 
@@ -34,3 +36,6 @@
 ```
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 ```
+
+#### 附录：
+ **博客地址：[Storyboard上加载自定义xib](https://www.jianshu.com/p/5e7b981e99ec)**
