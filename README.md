@@ -29,7 +29,7 @@
 
 #### 1、类文件和xib分开创建 （`XibTableViewCell`）
 
-#### 2、类文件和xib分开创建 （`XibFileTableViewCell`）
+#### 2、类文件和xib同时创建 （`XibFileTableViewCell`）
 
 不管使用哪种方式，都是带高度自适应的效果。实现方式如下：
 
