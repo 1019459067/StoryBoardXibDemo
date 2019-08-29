@@ -14,12 +14,12 @@
 		A60ADAF7231603CE00E2F8C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60ADAF5231603CE00E2F8C5 /* LaunchScreen.storyboard */; };
 		A60ADAFA231603CE00E2F8C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A60ADAF9231603CE00E2F8C5 /* main.m */; };
 		A60ADB02231604F800E2F8C5 /* TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = A60ADB01231604F800E2F8C5 /* TipsView.m */; };
-		A60ADB042316051A00E2F8C5 /* TipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60ADB032316051A00E2F8C5 /* TipsView.xib */; };
 		A60ADB722316512E00E2F8C5 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60ADB712316512E00E2F8C5 /* TableViewController.m */; };
 		A60ADB79231654D200E2F8C5 /* XibTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A60ADB78231654D200E2F8C5 /* XibTableViewCell.m */; };
 		A60ADB7B2316550A00E2F8C5 /* XibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60ADB7A2316550A00E2F8C5 /* XibTableViewCell.xib */; };
 		A60ADB7F2316646200E2F8C5 /* XibFileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A60ADB7D2316646200E2F8C5 /* XibFileTableViewCell.m */; };
 		A60ADB802316646200E2F8C5 /* XibFileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60ADB7E2316646200E2F8C5 /* XibFileTableViewCell.xib */; };
+		A6638D2C23175B910051766F /* TipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6638D2B23175B910051766F /* TipsView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,6 @@
 		A60ADAF9231603CE00E2F8C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A60ADB00231604F800E2F8C5 /* TipsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipsView.h; sourceTree = "<group>"; };
 		A60ADB01231604F800E2F8C5 /* TipsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipsView.m; sourceTree = "<group>"; };
-		A60ADB032316051A00E2F8C5 /* TipsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsView.xib; sourceTree = "<group>"; };
 		A60ADB702316512E00E2F8C5 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		A60ADB712316512E00E2F8C5 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		A60ADB77231654D200E2F8C5 /* XibTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XibTableViewCell.h; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		A60ADB7C2316646200E2F8C5 /* XibFileTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XibFileTableViewCell.h; sourceTree = "<group>"; };
 		A60ADB7D2316646200E2F8C5 /* XibFileTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XibFileTableViewCell.m; sourceTree = "<group>"; };
 		A60ADB7E2316646200E2F8C5 /* XibFileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibFileTableViewCell.xib; sourceTree = "<group>"; };
+		A6638D2B23175B910051766F /* TipsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 			children = (
 				A60ADB00231604F800E2F8C5 /* TipsView.h */,
 				A60ADB01231604F800E2F8C5 /* TipsView.m */,
-				A60ADB032316051A00E2F8C5 /* TipsView.xib */,
+				A6638D2B23175B910051766F /* TipsView.xib */,
 			);
 			path = TipsView;
 			sourceTree = "<group>";
@@ -118,6 +118,7 @@
 			children = (
 				A60ADAEA231603CD00E2F8C5 /* AppDelegate.h */,
 				A60ADAEB231603CD00E2F8C5 /* AppDelegate.m */,
+				A60ADAF0231603CD00E2F8C5 /* Main.storyboard */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -127,7 +128,6 @@
 			children = (
 				A60ADAED231603CD00E2F8C5 /* ViewController.h */,
 				A60ADAEE231603CD00E2F8C5 /* ViewController.m */,
-				A60ADAF0231603CD00E2F8C5 /* Main.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 				A60ADAF7231603CE00E2F8C5 /* LaunchScreen.storyboard in Resources */,
 				A60ADB7B2316550A00E2F8C5 /* XibTableViewCell.xib in Resources */,
 				A60ADAF4231603CE00E2F8C5 /* Assets.xcassets in Resources */,
-				A60ADB042316051A00E2F8C5 /* TipsView.xib in Resources */,
+				A6638D2C23175B910051766F /* TipsView.xib in Resources */,
 				A60ADAF2231603CD00E2F8C5 /* Main.storyboard in Resources */,
 				A60ADB802316646200E2F8C5 /* XibFileTableViewCell.xib in Resources */,
 			);

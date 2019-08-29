@@ -17,7 +17,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    TipsView *contentView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class) owner:nil options:nil].firstObject;
+    TipsView *contentView = (TipsView *)[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil].firstObject;
     if (contentView != nil) {
         [self addSubview:contentView];
         contentView.frame = self.bounds;

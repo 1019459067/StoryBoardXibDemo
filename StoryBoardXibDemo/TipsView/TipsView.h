@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TipsView : UIView
 
-@property (strong, nonatomic) UILabel *contentLabel;
+@property (weak, nonatomic) UILabel *contentLabel;
 
 @end
 

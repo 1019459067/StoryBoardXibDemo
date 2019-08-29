@@ -10,7 +10,7 @@
 #import "XibTableViewCell.h"
 #import "XibFileTableViewCell.h"
 
-@interface TableViewController ()
+@interface TableViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, copy) NSArray *dataArray;
 
 @end
