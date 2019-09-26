@@ -65,7 +65,13 @@
             cell =  [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(XibTableViewCell.class) owner:self options:nil].firstObject;
         }
         cell.contentLabel = [cell viewWithTag:100];
-        cell.contentLabel.text = self.dataArray[indexPath.row];
+        NSString *strTitle = self.dataArray[indexPath.row];
+        int iRand = [self getRandomNumber:2 to:14];
+        cell.contentLabel.text = strTitle;
+        NSString *strLabelGreen = [NSString stringWithFormat:@"%@ - %d",[strTitle substringWithRange:NSMakeRange(0, iRand)],iRand];
+        cell.labelGreen.text = strLabelGreen;
+        cell.constraintW.constant = [self getWWithLabel:cell.labelGreen];
+        cell.labelYellow.text = [NSString stringWithFormat:@"%d - %@",iRand,[strTitle substringWithRange:NSMakeRange(iRand, iRand*2)]] ;
         return cell;
     } else {
         XibFileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(XibFileTableViewCell.class)];
@@ -78,6 +84,19 @@
     }
 }
 
+- (CGFloat)getWWithLabel:(UILabel *)label
+{
+    CGSize size = [label.text boundingRectWithSize:CGSizeMake(MAXFLOAT, 20)
+       options:NSStringDrawingUsesLineFragmentOrigin
+    attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:label.font.pointSize]}
+       context:nil].size;
+    return size.width + 5;
+}
+
+- (int)getRandomNumber:(int)from to:(int)to
+{
+   return (int)(from + (arc4random() % (to - from + 1)));
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

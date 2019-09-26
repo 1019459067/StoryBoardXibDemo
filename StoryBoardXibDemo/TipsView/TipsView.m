@@ -25,13 +25,13 @@
     self.contentLabel = [contentView viewWithTag:100];
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    if (self = [super initWithCoder:aDecoder]) {
-        
-    }
-    return self;
-}
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder
+//{
+//    if (self = [super initWithCoder:aDecoder]) {
+//        
+//    }
+//    return self;
+//}
 
 /*
 // Only override drawRect: if you perform custom drawing.

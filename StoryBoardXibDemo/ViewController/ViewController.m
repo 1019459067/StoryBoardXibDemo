@@ -33,5 +33,8 @@
                                        attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:self.tips.contentLabel.font.pointSize]}
                                           context:nil].size;
     self.tipsHeight.constant = size.height+20;
+    
+    self.nextBtnTop.constant = 100;
+
 }
 @end
