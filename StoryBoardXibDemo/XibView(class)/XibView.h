@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XibView : UIView
 
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

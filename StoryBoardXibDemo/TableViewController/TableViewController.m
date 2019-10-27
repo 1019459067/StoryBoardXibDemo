@@ -69,9 +69,10 @@
         int iRand = [self getRandomNumber:2 to:14];
         cell.contentLabel.text = strTitle;
         NSString *strLabelGreen = [NSString stringWithFormat:@"%@ - %d",[strTitle substringWithRange:NSMakeRange(0, iRand)],iRand];
+        NSString *strLabelYellow = [NSString stringWithFormat:@"%d - %@",iRand,[strTitle substringWithRange:NSMakeRange(iRand, iRand*2)]];
         cell.labelGreen.text = strLabelGreen;
         cell.constraintW.constant = [self getWWithLabel:cell.labelGreen];
-        cell.labelYellow.text = [NSString stringWithFormat:@"%d - %@",iRand,[strTitle substringWithRange:NSMakeRange(iRand, iRand*2)]] ;
+        cell.labelYellow.text = strLabelYellow;
         return cell;
     } else {
         XibFileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(XibFileTableViewCell.class)];
@@ -90,7 +91,7 @@
        options:NSStringDrawingUsesLineFragmentOrigin
     attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:label.font.pointSize]}
        context:nil].size;
-    return size.width + 5;
+    return size.width + label.font.pointSize;
 }
 
 - (int)getRandomNumber:(int)from to:(int)to

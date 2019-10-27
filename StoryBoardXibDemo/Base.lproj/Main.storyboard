@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--StoryBoardXibDemo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                                     <segue destination="l2C-cx-FMC" kind="show" id="5a9-vc-RrJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nU-9p-4mF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nU-9p-4mF">
                                 <rect key="frame" x="20" y="148" width="374" height="70"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -69,8 +69,10 @@
                             <constraint firstItem="TKf-Uk-7rD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iKL-77-5kV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dfi-b2-bgg"/>
+                    <navigationItem key="navigationItem" title="StoryBoardXibDemo" id="dfi-b2-bgg"/>
                     <connections>
+                        <outlet property="onlyLabel" destination="9nU-9p-4mF" id="zqc-on-nbd"/>
+                        <outlet property="onlyLabelConstraintH" destination="tmB-8f-bpI" id="b5R-HE-pt9"/>
                         <outlet property="tipsConstraintH" destination="5xB-H8-Bu1" id="ZqG-cW-A0f"/>
                         <outlet property="tipsView" destination="9G3-SQ-M8b" id="o4f-Sb-kbj"/>
                         <outlet property="xibView" destination="dSj-AN-n7V" id="zsQ-5a-co1"/>

@@ -18,7 +18,9 @@ NSString *str = @"发生在香港的游行示威和暴力活动已经持续了�
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet TipsView *tipsView;
 @property (weak, nonatomic) IBOutlet XibView *xibView;
+@property (weak, nonatomic) IBOutlet UILabel *onlyLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tipsConstraintH;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *onlyLabelConstraintH;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *xibViewConstraintH;
 @end
 
@@ -28,30 +30,34 @@ NSString *str = @"发生在香港的游行示威和暴力活动已经持续了�
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self updateTipsView];
-    [self updateXibView];
+    [self updateView:self.tipsView.contentLabel
+              string:str
+               width:SCREEN_WIDTH-20*2-2*20-60
+          constraint:self.tipsConstraintH];
     
-}
-
-- (void)updateXibView
-{
-    self.xibView.contentLabel.text = str;
-
-    CGSize size = [str boundingRectWithSize:CGSizeMake(SCREEN_WIDTH-20*2-2*20-60, MAXFLOAT)
-                                    options:1
-                                 attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:self.xibView.contentLabel.font.pointSize]}
-                                    context:nil].size;
-    self.xibViewConstraintH.constant = size.height+20+30;
-}
-
-- (void)updateTipsView
-{
-    self.tipsView.contentLabel.text = str;
+    [self updateView:self.onlyLabel
+              string:str
+               width:SCREEN_WIDTH-20*2
+          constraint:self.onlyLabelConstraintH];
     
-    CGSize size = [str boundingRectWithSize:CGSizeMake(SCREEN_WIDTH-20*2-2*20-60, MAXFLOAT)
-                                    options:1
-                                 attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:self.tipsView.contentLabel.font.pointSize]}
-                                    context:nil].size;
-    self.tipsConstraintH.constant = size.height+20+30;
+    [self updateView:self.xibView.contentLabel
+              string:str
+               width:SCREEN_WIDTH-20*2-2*20-60
+          constraint:self.xibViewConstraintH];
 }
+
+- (void)updateView:(UILabel *)label
+            string:(NSString *)string
+             width:(CGFloat)width
+        constraint:(NSLayoutConstraint *)constraint
+{
+    label.text = string;
+    
+    CGSize size = [label.text boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
+                                           options:1
+                                        attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:label.font.pointSize]}
+                                           context:nil].size;
+    constraint.constant = size.height+label.font.pointSize;
+}
+
 @end
