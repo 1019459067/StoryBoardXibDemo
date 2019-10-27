@@ -9,36 +9,19 @@
 #import "XibView.h"
 
 @interface XibView ()
-
+@property (weak, nonatomic) IBOutlet UIView *mainView;
 @end
 
 @implementation XibView
 
-- (void)awakeFromNib
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    [super awakeFromNib];
-//    TipsView *contentView = (TipsView *)[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil].firstObject;
-//    if (contentView != nil) {
-//        [self addSubview:contentView];
-//        contentView.frame = self.bounds;
-//    }
-//    self.contentLabel = [contentView viewWithTag:100];
+    if (self = [super initWithCoder:aDecoder]) {
+        self.mainView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil].firstObject;
+        self.mainView.frame = self.bounds;
+        [self addSubview:self.mainView];
+    }
+    return self;
 }
-
-//- (instancetype)initWithCoder:(NSCoder *)aDecoder
-//{
-//    if (self = [super initWithCoder:aDecoder]) {
-//        
-//    }
-//    return self;
-//}
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
