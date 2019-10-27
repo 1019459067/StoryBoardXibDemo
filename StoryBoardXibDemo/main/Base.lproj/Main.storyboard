@@ -35,7 +35,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nU-9p-4mF">
                                 <rect key="frame" x="20" y="148" width="374" height="70"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="tmB-8f-bpI"/>
                                 </constraints>
@@ -43,6 +43,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TAG-Ab-UNf">
+                                <rect key="frame" x="18" y="268" width="378" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -51,15 +54,19 @@
                             <constraint firstItem="9nU-9p-4mF" firstAttribute="trailing" secondItem="9G3-SQ-M8b" secondAttribute="trailing" id="FgZ-Td-kj5"/>
                             <constraint firstItem="TKf-Uk-7rD" firstAttribute="top" secondItem="9nU-9p-4mF" secondAttribute="bottom" constant="10" id="Hor-GF-Ksj"/>
                             <constraint firstItem="9nU-9p-4mF" firstAttribute="leading" secondItem="9G3-SQ-M8b" secondAttribute="leading" id="Mf3-cy-AgN"/>
+                            <constraint firstItem="TAG-Ab-UNf" firstAttribute="trailing" secondItem="9nU-9p-4mF" secondAttribute="trailing" id="YWo-C1-URi"/>
                             <constraint firstItem="9G3-SQ-M8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="abF-G9-g19"/>
                             <constraint firstItem="9G3-SQ-M8b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="cWs-kH-fze"/>
                             <constraint firstItem="TKf-Uk-7rD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iKL-77-5kV"/>
+                            <constraint firstItem="TAG-Ab-UNf" firstAttribute="top" secondItem="TKf-Uk-7rD" secondAttribute="bottom" constant="10" id="lLJ-vd-yhj"/>
+                            <constraint firstItem="TAG-Ab-UNf" firstAttribute="leading" secondItem="9nU-9p-4mF" secondAttribute="leading" id="r5V-Ob-CwO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="dfi-b2-bgg"/>
                     <connections>
                         <outlet property="nextBtnTop" destination="Hor-GF-Ksj" id="UDF-JE-iBw"/>
+                        <outlet property="slider" destination="TAG-Ab-UNf" id="eSH-TW-KA8"/>
                         <outlet property="tips" destination="9G3-SQ-M8b" id="o4f-Sb-kbj"/>
                         <outlet property="tipsHeight" destination="5xB-H8-Bu1" id="ZqG-cW-A0f"/>
                     </connections>

@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet TipsView *tips;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *nextBtnTop;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tipsHeight;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 
 @end
 
@@ -35,6 +36,8 @@
     self.tipsHeight.constant = size.height+20;
     
     self.nextBtnTop.constant = 100;
+    
+    self.slider.frame = CGRectMake(0, 0, 333, 0);
 
 }
 @end
