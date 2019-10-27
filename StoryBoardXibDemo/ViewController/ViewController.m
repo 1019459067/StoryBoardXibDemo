@@ -29,13 +29,13 @@
     self.tips.contentLabel.text = str;
     
     
-    CGSize size = [str boundingRectWithSize:CGSizeMake(SCREEN_WIDTH-40-40-60-20, MAXFLOAT)
-                                          options:NSStringDrawingUsesLineFragmentOrigin
-                                       attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:self.tips.contentLabel.font.pointSize]}
-                                          context:nil].size;
-    self.tipsHeight.constant = size.height+20;
+    CGSize size = [str boundingRectWithSize:CGSizeMake(SCREEN_WIDTH-20*2-2*20-60, MAXFLOAT)
+                                    options:1
+                                 attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:self.tips.contentLabel.font.pointSize]}
+                                    context:nil].size;
+    self.tipsHeight.constant = size.height+20+30;
     
-    self.nextBtnTop.constant = 100;
+    self.nextBtnTop.constant = 20;
     
     self.slider.frame = CGRectMake(0, 0, 333, 0);
 
