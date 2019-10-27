@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XibView">
             <connections>
                 <outlet property="contentLabel" destination="qQC-Ov-cZ2" id="KTG-81-n1I"/>
                 <outlet property="mainView" destination="iN0-l3-epB" id="A8w-aF-Npd"/>

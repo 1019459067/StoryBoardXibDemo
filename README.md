@@ -3,7 +3,26 @@
 
 为了加快开发速度，提升效率。今天研究了一下`storyboard`、`xib`的使用。主要涉及了两个部分：
 
-## 一、`storyboard`上加载自定义`xib`
+## 一、`storyboard`上加载自定义`xib`，`xib`内的子视图可直接拖拽引用
+
+这里以新建的`XibView`为例。如何创建这里省略。
+
+1、选中`placeholders`中的`show the Identity inspector`，修改自定义类中的 `Class`，是你创建的类的名字
+![](image/100.jpg)
+
+2、在新建的类中，创建一个实例变量代表你需要的试图
+![](image/101.jpg)
+
+3、完善加载实例变量所代表的类，主要包括视频的`frame`
+![](image/102.jpg)
+
+4、将所创建的自定义类加载到`storyboard`中
+![](image/103.jpg)
+
+5、最终效果图
+![](image/105.jpg)
+
+## 二、`storyboard`上加载自定义`xib`，`xib`内的子视图通过Tag引用
 
 网上只有`swift`版本，若需要请自行查找。这里主要介绍`Objective-C`版本。
 
@@ -18,7 +37,7 @@
 ![](image/002.jpg)
 
 
-## 二、`xib`自定义`cell`
+## 三、`xib`自定义`cell`
 
 毋庸质疑，开发过程中cell的自定义需要的太多了，但是不想总是撸代码，所以就想到了`xib`。其实`xib`的使用也有很多方式，但是这里主要介绍文字可变，高度自适应的情况。
 
