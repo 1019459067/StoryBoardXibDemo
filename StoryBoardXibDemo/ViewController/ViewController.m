@@ -13,7 +13,7 @@
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
-NSString *str = @"发生在香港的游行示威和暴力活动已经持续了两个多月，香港的法治社会秩序、经济民生和国际形象都受到了严重冲击，没有人比包括香港市民，包括香港市民在内的中国人民更关心香港的繁荣稳定，我们自己的事情我们会处理好，请七国集团成员不要再居心叵测、多管闲事、图谋不轨。";
+NSString *str = @"发生在香港的游行示威和暴力活动已经持续了多月，香港的法治社会秩序、经济民生和国际形象都受到了严重冲击，没有人比包括香港市民，包括香港市民在内的中国人民更关心香港的繁荣稳定。";
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet TipsView *tipsView;
@@ -32,7 +32,7 @@ NSString *str = @"发生在香港的游行示威和暴力活动已经持续了�
     
     [self updateView:self.tipsView.contentLabel
               string:str
-               width:SCREEN_WIDTH-20*2-2*20-60
+               width:SCREEN_WIDTH-20*2-2*20-60-20-25
           constraint:self.tipsConstraintH];
     
     [self updateView:self.onlyLabel
@@ -42,7 +42,7 @@ NSString *str = @"发生在香港的游行示威和暴力活动已经持续了�
     
     [self updateView:self.xibView.contentLabel
               string:str
-               width:SCREEN_WIDTH-20*2-2*20-60
+               width:SCREEN_WIDTH-20*2-2*20-60-20-25
           constraint:self.xibViewConstraintH];
 }
 
